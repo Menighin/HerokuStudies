@@ -12,7 +12,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Build the tagged Docker image
-      run: docker build . --file Dockerfile --tag dockerstudies
+      run: docker build . --file HerokuCICD/Dockerfile --tag dockerstudies
     
     - name: Tag Docker image
       run: docker tag dockerstudies registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
