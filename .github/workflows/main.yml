@@ -15,10 +15,10 @@ jobs:
 
     - uses: actions/checkout@master
     - name: Build the tagged Docker image
-      run: docker build . --file HerokuCICD/Dockerfile --tag secrets.HEROKU_APP_NAME
+      run: docker build . --file HerokuCICD/Dockerfile --tag dockerstudies
     
     - name: Tag Docker image
-      run: docker tag secrets.HEROKU_APP_NAME registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
+      run: docker tag dockerstudies registry.heroku.com/${{ secrets.HEROKU_APP_NAME }}/web
     
     - name: Login to Heroku Container registry
       env: 
