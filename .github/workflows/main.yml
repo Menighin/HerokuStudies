@@ -31,4 +31,5 @@ jobs:
     - name: Release
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+        ASPNETCORE_ENVIRONMENT: Development
       run: heroku container:release -a ${{ secrets.HEROKU_APP_NAME }} web
