@@ -32,7 +32,7 @@ namespace HerokuCICD.Controllers
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
                 Summary = Summaries[rng.Next(Summaries.Length)],
-                TestingDeploy = "It worked!"
+                TestingDeploy = "It worked! Maybe..."
             })
             .ToArray();
         }
